@@ -94,8 +94,13 @@ article time {
     font-size: 0.9rem;
     color: var(--meta);
     margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 1px solid var(--article-border);
+}
+
+/* Only add the border and padding when there's a description */
+article time + p {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--article-border);
 }
 
 article p {

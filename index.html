@@ -15,16 +15,16 @@
     <main>
         <article>
             <h2><a href="https://superuser.com/questions/1491077/mouse-scrolling-less-pager-output-in-tmux-session#comment2525321_1589579" target="_blank" rel="noopener noreferrer">Mouse scrolling less pager output in tmux session</a></h2>
-            <time datetime="2025-03-11">March 3, 2025</time>
+            <time datetime="2025-03-11"></time>
             <p>I needed this for mouse scrolling to work in Tmux even though my Less is above 350. Which in turn enables it for `bat`. See also <a href="https://github.com/sharkdp/bat?tab=readme-ov-file#using-less-as-a-pager:~:text=For%20less%20530%20or%20newer%2C%20it%20should%20work%20out%20of%20the%20box.">Using less as a pager</a></p>
         </article>
         <article>
             <h2><a href="https://gist.github.com/stevecondylios/dcadb4fc73e63f27a3bbcf17e52058bf" target="_blank" rel="noopener noreferrer">How to Resize an Image in Github README.md (i.e. Github Flavored Markdown)</a></h2>
-            <time datetime="2025-03-11">March 3, 2025</time>
+            <time datetime="2025-03-11"></time>
         </article>
         <article>
             <h2><a href="https://annjose.com/post/v0-dev-firsthand/" target="_blank" rel="noopener noreferrer">Vercel v0.dev: A hands-on review</a></h2>
-            <time datetime="2025-02-25">February 25, 2025</time>
+            <time datetime="2025-02-25"></time>
             <p>
                 Found v0.dev, interesting AI tool for building UI's.
             </p>
@@ -34,5 +34,26 @@
     <footer>
         <p>© 2025 IO2G.com</p>
     </footer>
+
+    <script>
+        // Format dates from datetime attributes
+        document.addEventListener('DOMContentLoaded', function() {
+            const timeElements = document.querySelectorAll('time[datetime]');
+            
+            timeElements.forEach(function(timeElement) {
+                const dateStr = timeElement.getAttribute('datetime');
+                if (dateStr) {
+                    const date = new Date(dateStr);
+                    
+                    // Format the date (e.g., "February 25, 2025")
+                    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                    const formattedDate = date.toLocaleDateString('en-US', options);
+                    
+                    // Set the formatted date as the content of the time element
+                    timeElement.textContent = formattedDate;
+                }
+            });
+        });
+    </script>
 </body>
 </html>
